@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  frontend:
+    build: .
+    container_name: todoReact
+    volumes:
+      - ./todoReact:/todoReact
+    ports:
+      - 3000:3000
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
